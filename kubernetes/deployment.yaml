@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: springkafkaconsumer
-          image: your-docker-registry/springkafkaconsumer:latest
+          image: doomthedocker/springkafkaconsumer:latest
           ports:
             - containerPort: 8088
           env:
