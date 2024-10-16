@@ -1,0 +1,14 @@
+# Fichier: kubernetes/service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: springkafkaconsumer
+  namespace: develop
+spec:
+  selector:
+    app: springkafkaconsumer
+  ports:
+    - protocol: TCP
+      port: 8088
+      targetPort: 8088

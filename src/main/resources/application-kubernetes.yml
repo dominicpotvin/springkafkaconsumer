@@ -1,0 +1,3 @@
+spring:
+  kafka:
+    bootstrap-servers: kafka.develop.svc.cluster.local:9092

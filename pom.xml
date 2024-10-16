@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.dominic.automation</groupId>
 	<artifactId>springkafkaconsumer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>springkafkaconsumer</name>
 	<description>kafka consumer WebSocket Endpoint </description>
 	<properties>

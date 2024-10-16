@@ -1,0 +1,27 @@
+# Fichier: kubernetes/deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springkafkaconsumer
+  namespace: develop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springkafkaconsumer
+  template:
+    metadata:
+      labels:
+        app: springkafkaconsumer
+    spec:
+      containers:
+        - name: springkafkaconsumer
+          image: your-docker-registry/springkafkaconsumer:latest
+          ports:
+            - containerPort: 8088
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "kubernetes"
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: "kafka.develop.svc.cluster.local:9092"
