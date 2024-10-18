@@ -1,11 +1,10 @@
-# Fichier: kubernetes/service.yaml
-
 apiVersion: v1
 kind: Service
 metadata:
   name: springkafkaconsumer
   namespace: develop
 spec:
+  type: LoadBalancer
   selector:
     app: springkafkaconsumer
   ports:
